@@ -1,0 +1,8 @@
+title: "OpenClassrooms Content Style Guide"
+email: david.major@openclassrooms.com
+baseurl:          /
+url: ""
+
+exclude:
+  - Gemfile
+  - Gemfile.lock

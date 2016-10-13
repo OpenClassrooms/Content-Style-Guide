@@ -1,7 +1,18 @@
 title: "OpenClassrooms Content Style Guide"
 email: david.major@openclassrooms.com
-baseurl:          /
+baseurl: /
 url: ""
+
+permalink: pretty
+markdown: kramdown
+
+collections:
+  docs:
+    output: false
+
+sass:
+  sass_dir: _sass
+  style: compressed
 
 exclude:
   - Gemfile

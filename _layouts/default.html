@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body data-spy="scroll" data-target="#toc">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3 col-md-2 sidebar">
+            {% include nav.html %}
+          </div>
+          <div class="col-sm-9 col-md-10">
+            <section class="main">
+              {% for doc in site.docs %}
+              <h1>{{ doc.title }}</h1>
+              {{ doc.content }}
+              {% endfor %}
+            </section>
+          </div>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v0.4.1/dist/bootstrap-toc.min.js"></script
+  </body>
+</html>

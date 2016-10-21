@@ -7,6 +7,9 @@
 
 $oc-primary-colour: #f56900;
 
+@import "nav";
+@import "examples";
+
 body {
     padding-top: 70px;
 }
@@ -16,105 +19,9 @@ body {
     padding-bottom: 15px;
 }
 
-pre {
-    width: 100%;
-    background-color: #f5f5f5;
-    padding: 15px;
-    padding-top: 20px;
-    white-space: pre-wrap;
-    white-space: -moz-pre-wrap;
-    white-space: -pre-wrap;
-    white-space: -o-pre-wrap;
-    word-wrap: break-word;
-    text-indent: -25px;
-    code {
-        @extend body;
-        background: none;
-        font-family: "Open Sans", sans-serif;
-        font-size: 0.9em;
-    }
-    code:before {
-        position: relative;
-        top: -25px;
-        left: 10px;
-        padding: 5px;
-        font-weight: bold;
-        font-size: 0.9em;
-        background: white
-    }
-    code.language-en:before { content: "en"; }
-    code.language-fr:before { content: "fr"; }
-    code.language-es:before { content: "es"; }
-}
-
-nav[data-toggle=toc] .nav > li > a {
-    display: block;
-    padding: 4px 20px;
-    font-size: 13px;
-    font-weight: 500;
-    color: #767676
-}
-
-nav[data-toggle=toc] .nav > li > a:focus, nav[data-toggle=toc] .nav > li > a:hover {
-    padding-left: 19px;
-    color: $oc-primary-colour;
-    text-decoration: none;
-    background-color: transparent;
-    border-left: 1px solid $oc-primary-colour
-}
-
-nav[data-toggle=toc] .nav > .active:focus > a, nav[data-toggle=toc] .nav > .active:hover > a,
-nav[data-toggle=toc] .nav > .active > a {
-    padding-left: 18px;
-    font-weight: 700;
-    color: $oc-primary-colour;
-    background-color: transparent;
-    border-left: 2px solid $oc-primary-colour
-}
-
-nav[data-toggle=toc] .nav .nav {
-    display: none;
-    padding-bottom: 10px
-}
-
-nav[data-toggle=toc] .nav .nav > li > a {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-left: 30px;
-    font-size: 12px;
-    font-weight: 400
-}
-
-nav[data-toggle=toc] .nav .nav > li > a:focus, nav[data-toggle=toc] .nav .nav > li > a:hover {
-    padding-left: 29px
-}
-
-nav[data-toggle=toc] .nav .nav > .active:focus > a, nav[data-toggle=toc] .nav .nav > .active:hover > a,
-nav[data-toggle=toc] .nav .nav > .active > a {
-    padding-left: 28px;
-    font-weight: 500
-}
-
-nav[data-toggle=toc] .nav > .active > ul {
-    display: block
-}
-
-nav[data-toggle='toc'] {
-  margin-top: 20px;
-}
-
 @media (min-width: 768px) {
     section.main {
         padding-left: 100px;
         max-width: 760px;
     }
-}
-
-@media (max-width: 768px) {
-  nav.affix[data-toggle='toc'] {
-    position: static;
-  }
-  nav[data-toggle='toc'] .nav .nav {
-    display: block;
-  }
 }

@@ -16,6 +16,37 @@ body {
     padding-bottom: 15px;
 }
 
+pre {
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 15px;
+    padding-top: 20px;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+    text-indent: -25px;
+    code {
+        @extend body;
+        background: none;
+        font-family: "Open Sans", sans-serif;
+        font-size: 0.9em;
+    }
+    code:before {
+        position: relative;
+        top: -25px;
+        left: 10px;
+        padding: 5px;
+        font-weight: bold;
+        font-size: 0.9em;
+        background: white
+    }
+    code.language-en:before { content: "en"; }
+    code.language-fr:before { content: "fr"; }
+    code.language-es:before { content: "es"; }
+}
+
 nav[data-toggle=toc] .nav > li > a {
     display: block;
     padding: 4px 20px;
